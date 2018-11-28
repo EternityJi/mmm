@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/index.css">
-  <title>首页</title>
+  <link rel="stylesheet" href="./css/productlist.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- <link rel="stylesheet" href="./lib/mui/css/mui.css"> -->
+  <title>productlist</title>
 </head>
 <body>
   <div class="mm_containter">
-     
-                      <!-- 头部 -->
-          <div class="mm_header">
+            <!-- 头部 -->
+        <div class="mm_header">
             <div class="logo">
                  <img src ="./images/header_logo.png">
             </div>
@@ -19,62 +20,61 @@
                  <img src = "./images/header_app.png">
             </div>
          </div>
-        <!-- 搜索部分 -->
+         <!-- 搜索部分 -->
         <div class="mm_search">
             <div class="input_search fl">
                 <input type="text" placeholder="请输入你想比价的商品">
             </div>
             <div class="info fr">搜索</div>
-      
-  
-     </div>
-      
-     
-      <!-- 导航部分 -->
-      <div class="mm_nav">
-          <ul class="clearfix indexmenu">
-              <!-- 菜单渲染 -->
-          </ul>
-      </div>
-      <!-- 超值折扣推荐 -->
-       <div class="mm_recommend">
-           <div class="title">
-              <div class="text fl">
-                 超值折扣推荐
-              </div>
-              <span class="icon fr">
-                  <img src = "./images/more.png">
-              </span>
-           </div>
-           <div class="main">
-               <ul>
-               <!-- 折扣渲染 -->
-               
-               </ul>
-           </div>
-       </div>
-       <!-- 更多优惠 -->
-       <div class="mm_more">
-            <div class="info">
-               <a href="">
-                  更多优惠信息>>
-               </a>
-               
-            </div>
-           
-       </div>
-       <!-- 品牌排行 -->
-       <div class="mm_sort">
-          <div class="title">
-              <div class="text fl">
-                 超值折扣推荐
-              </div>
-              <span class="icon fr">
-                  <img src = "./images/more.png">
-              </span>
-           </div>
-       </div>
-       <!-- 底部 -->
+        </div>
+        <!-- 主体部分 -->
+        <div class="product_main">
+              <div class="product_content">
+                <!-- 3级列表 -->
+                    <div class="product_list">
+                        <div class="list clearfix fl">
+                            <a href="">首页></a>         
+                            <a href="">全部分类></a>         
+                            <a href="">电视></a>   
+                        </div>
+                            <button class="select  fr">
+                                筛选
+                            </button> 
+                    </div>
+                <!-- 对应的内容 -->
+                    <div class="list_content "> 
+                            <ul>
+                              <li>
+                                <a href="http://">
+                                   <div class="left">
+                                      <img src="./images/categorylist.jpg">
+                                   </div>
+                                   <div class="right">
+                                       <p>1111111</p>
+                                       <p class="price"> </p>
+                                       <p>
+                                         <span>报价(6)</span>
+                                         <span>评论(2286)</span>
+                                       </p>
+                                   </div>
+                                </a>
+                              </li>
+                            </ul>
+                    </div>
+              </div> 
+               <!--分页  -->
+                <div class="product_page">
+                      <ul>
+
+                      </ul>
+                </div>
+        </div>
+    
+    
+       
+       
+       
+        <!-- 底部 -->
        <div class="mm_footer">
               <ul class="clearfix">
                 <li>
@@ -138,6 +138,6 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/flexible/flexible.js"></script>
   <script src="./lib/mui/js/mui.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/productlist.js"></script>
 </body>
 </html>

@@ -1,0 +1,117 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+img{
+  width: 100%;
+  height: 100%;
+}
+a{
+    display: block;
+}
+.mm_containter{
+  width: 100%;
+  height:100%;
+  padding-top:220rem/@base;
+  // background: #f1f1f1;
+        .mm_header{
+          width: 100%;
+          height: 100rem/@base;
+          position: fixed;
+          top:0;
+          background:@mmColor;
+          z-index: 999;
+
+            .logo{
+                position: absolute;
+                top:25rem/@base;
+                left: 35rem/@base;
+                width: 371rem/@base;
+                height: 50rem/@base;
+                
+              }
+              .app{
+                  width: 68rem/@base;
+                  height: 68rem/@base;
+                  position: absolute;
+                  top:10rem/@base;
+                  right: 10rem/@base;
+              }
+        }
+        .mm_search{
+        width: 100%;
+        height: 103rem/@base;
+        // background: pink;
+        padding:22rem/@base;
+        margin-bottom: 17px;
+          background: #fff;
+          position: fixed;
+          z-index: 999;
+          top:100rem/@base;
+        .input_search{
+            width: 560rem/@base;
+            height:100%;
+              input{
+                    padding-left: 40rem/@base;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50rem/@base;
+                    font-size: 30rem/@base;
+                    color: #8c8e94;
+                    background: #f1f1f1;
+              }
+        }
+        .info{
+          width: 125rem/@base;
+          height: 100%;
+          border-radius: 50px;
+          background-color: @mmColor;
+          line-height: 60rem/@base;
+          text-align: center;
+          font-size: 33rem/@base;
+          color: #fff;
+        }
+
+        }
+
+        // 底部
+        .mm_footer{
+          ul{
+              border:1px solid #ccc;
+              margin-top:50rem/@base;
+              margin-bottom: 33rem/@base;
+          li{
+            width: 33.3%;
+            font-size: 40rem/@base;
+            float: left;
+            height: 63rem/@base;
+            line-height: 63rem/@base;
+            text-align: center;
+            border-right:1px solid #ccc;
+            &:nth-child(3){
+              border-right:none;
+              position: relative;
+              i{   
+                  position: absolute;
+                  width: 30rem/@base;
+                  height: 30rem/@base;
+                  top: 12rem/@base;
+                  left: 5rem/@base;
+              }
+            }
+            }
+          
+          }
+          p{
+          width: 100%;
+          text-align: center;
+          line-height: 50rem/@base;
+          font-size:12rem/@base;
+        }
+      }
+}
