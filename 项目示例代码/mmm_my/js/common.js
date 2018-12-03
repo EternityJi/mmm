@@ -12,3 +12,10 @@ function getAjax(url,param,name,Tpl){
     }
 })
 }
+ // 点击返回顶部
+ $(".mm_footer .returnTop").click(function(){
+  $(document).scrollTop(0);
+  console.log(111);
+  
+})
+    

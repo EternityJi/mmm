@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/discount.css">
+  <link rel="stylesheet" href="./css/inlanddiscount.css">
+  <title>国内折扣</title>
+</head>
+<body>
+  <div class="mm_containter top" >
+                      <!-- 头部 -->
+          <div class="mm_header">
+            <div class="logo">
+                 <a href="javascript:history.back();"><i class="fa fa-chevron-left left_icon"></i>
+                 </a>
+            </div>
+            <div class="center">
+                国内折扣
+            </div>
+            <div class="app">
+                 <img src = "./images/header_app.png">
+            </div>
+         </div>
+         <!-- 主体部分 -->
+         <div class="mm_main">
+            <ul class="ulList clearfix">
+              <!-- <li>
+                <a href="#">
+                    <div class="pic"></div>
+                    <p class="text">1111</p>
+                    <p class="price">￥199元</p>
+                    <span>京东商城</span>
+                    <span>10-22 13:28</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                    <div class="pic"></div>
+                    <p class="text">1111</p>
+                    <p class="price">￥199元</p>
+                    <span>京东商城</span>
+                    <span>10-22 13:28</span>
+                </a>
+              </li> -->
+            </ul>
+         </div>
+       <!-- 底部 -->
+       <div class="mm_footer">
+              <ul class="clearfix">
+                <li>
+                  <a href="">
+                      登录
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                      注册
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                     <i class="pic"><img src="./images/top.jpg"></i>返回顶部
+                  </a>
+                </li>
+              </ul>
+              <p class="p1">
+                  <span style="color:#fe1206">手机APP下载</span>
+                  <span>慢慢买手机版</span>
+                  <span style="color:#d0cfcd">--掌上比价平台</span>
+             </p>
+              <p  class="p2">m.manmanbuy.com</p>
+       </div>
+  </div>
+  <!-- 模板 -->
+<script type="text/html" id="inlanddiscountTpl">
+  {{each result v i}}
+      <li>
+        <a href="discountproduct.html?productId={{v.productId}}">
+            <div class="pic">{{@v.productImg    }}</div>
+            <p class="text txt-two">{{ v.productName }}</p>
+            <p class="price">{{ v.productPrice}}</p>
+            <span>{{ v.productFrom }}</span>
+            <span>{{ v.productTime }}</span>
+        </a>
+      </li>
+  {{/each}}
+</script>
+
+
+ <script src="./lib/jquery/jquery.min.js"></script>
+ <script type="text/javascript" src="./lib/lazyload/jquery.lazyload.js"></script>
+ <script type="text/javascript" src="./js/imgLazy.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/getKey.js"></script>
+  <script src="./js/imgLazy.js"></script>
+  <script src="./js/inlanddiscount.js"></script>
+ 
+
+</body>
+</html>

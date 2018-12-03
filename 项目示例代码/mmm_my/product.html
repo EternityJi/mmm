@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/productlist.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <!-- <link rel="stylesheet" href="./lib/mui/css/mui.css"> -->
+  <title>productlist</title>
+</head>
+<body>
+  <div class="mm_containter">
+            <!-- 头部 -->
+        <div class="mm_header">
+            <div class="logo">
+                 <img src ="./images/header_logo.png">
+            </div>
+            <div class="app">
+                 <img src = "./images/header_app.png">
+            </div>
+         </div>
+         <!-- 搜索部分 -->
+        <div class="mm_search">
+            <div class="input_search fl">
+                <input type="text" placeholder="请输入你想比价的商品">
+            </div>
+            <div class="info fr">搜索</div>
+        </div>
+        <!-- 主体部分 -->
+        <div class="product_main">
+              <div class="product_content">
+                <!-- 3级列表 -->
+                    <div class="product_list">
+                        <div class="list clearfix fl">
+                            <!-- <a href="">首页></a>         
+                            <a href="">全部分类></a>         
+                            <a href="">电视></a>    -->
+                        </div>
+                            <button class="select  fr">
+                                筛选
+                            </button> 
+                    </div>
+              </div>
+
+                <!-- 对应的内容 -->
+                 <div class="list_content "> 
+                        <!-- 详情描述 -->
+                        <!-- <div class="detail">
+                                创维(Skyworth) 50M5 50英寸 超高清 智能网络LED液晶电视
+                        </div>
+                        <div class="detail_pic">
+                            2222
+                        </div>
+                        <div class="circle">
+                            收藏
+                        </div> -->
+                </div> 
+                <!-- 导航-->
+                 <div class="product_nav">
+                     <ul>
+                         <li><a href="#">比价购买</a></li>
+                         <li><a href="#">比价购买</a></li>
+                         <li><a href="#">比价购买</a></li>
+                     </ul>
+                 </div>
+                <!-- 京东商城 -->
+                <div class="shop">
+                     <i><img src="./images/slogo.png"></i> 
+                     <span class="text">京东商城</span>
+                     <span class="price">￥ 1999.00</span>
+                     <span class="go ">去购买</span>
+                </div>
+                <!-- 说明 -->
+                <div class="message">
+                    实际情况以各网站真实售价为准
+                </div>
+                 <!-- 评论 -->
+                 <div class="comment">
+                        <ul class="ulComment">
+                            <!-- <li>
+                                <div class="title clearfix">
+                                     <div class="left fl">222</div>
+                                     <div class="right fr">
+                                         <p>2016/10/1</p>
+                                         <p>购买自:京东</p>
+                                     </div>
+                                </div>
+                                <div class="info">
+                                        使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
+                                </div>
+                            </li> -->
+                        </ul>
+                 </div>
+               <!--分页  -->
+                            <div class="product_page">
+                      <ul>
+
+                      </ul>
+                </div>
+       
+    
+    
+       
+       
+       
+        <!-- 底部 -->
+       <div class="mm_footer">
+              <ul class="clearfix">
+                <li>
+                  <a href="">
+                      登录
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                      注册
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                     <i class="pic"><img src="./images/top.jpg"></i>返回顶部
+                  </a>
+                </li>
+              </ul>
+              <p class="p1">
+                  <span style="color:#fe1206">手机APP下载</span>
+                  <span>慢慢买手机版</span>
+                  <span style="color:#d0cfcd">--掌上比价平台</span>
+             </p>
+              <p  class="p2">m.manmanbuy.com</p>
+       </div>
+  </div>
+  <!-- 菜单栏部分模板 -->
+<script type="text/html" id="productbyidTpl">
+    {{ each result v i}}
+      <a href="index.html">首页></a>         
+      <a href="javascript:history.back();">{{ v.category }}></a>
+      <a href="" class="third">
+     </a>   
+    {{ /each }}
+</script>
+
+<!-- 商品详情模板 -->
+<script type="text/html" id="getproductTpl">
+    {{ each result v i}}
+    <div class="detail">
+           {{ v.productName }}
+    </div>
+    <div class="detail_pic">
+        {{@v.productImg}}
+    </div>
+    <div class="circle">
+        收藏
+    </div>
+    {{ /each }}
+</script>
+  
+<!-- 渲染第3级标题 -->
+<script type="text/html" id="thidTitle">
+    {{each result v i}}
+     <span>
+       {{ v.productName }}
+    </span>
+   {{ /each }}
+</script>
+           
+   
+
+<!-- 商品评论模板 -->
+<script type="text/html" id="getproductcomTpl">
+    {{ each result v i}}
+    <li>
+            <div class="title clearfix">
+                 <div class="left fl">{{ v.comName }}</div>
+                 <div class="right fr">
+                     <p>{{ v.comTime }}</p>
+                     <p>{{ v.comFrom }}</p>
+                 </div>
+            </div>
+            <div class="info">
+                  {{ v.comContent }}
+            </div>
+        </li>
+        {{ /each }}
+</script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./js/getKey.js"></script>
+  <script src="./js/product.js"></script>
+  
+</body>
+</html>

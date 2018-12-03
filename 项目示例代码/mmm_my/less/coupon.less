@@ -1,0 +1,88 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+img{
+  width: 100%;
+  height: 100%;
+}
+.mm_containter{
+    padding-top: 100rem/@base;
+.mm_header{
+  width: 100%;
+  height: 100rem/@base;
+  position: fixed;
+  top:0;
+  background: #f4483e;
+  z-index: 999;
+  color:#fff;
+    .logo{
+         position: absolute;
+         left: 0;
+         top:0;
+         width: 100rem/@base;
+         height: 100rem/@base;
+         line-height: 100rem/@base;
+         text-align: center;
+           a{
+                display: block;
+               i{
+                   color: #fff;
+                   font-size: 20rem/@base;
+               }
+           }
+      }
+      .app{
+          width: 100rem/@base;
+          height: 100rem/@base;
+          line-height: 100rem/@base;
+          position: absolute;
+          right: 0;
+          top:0;
+          img{
+             width: 68rem/@base;
+             height: 68rem/@base;
+             display: inline-block;
+             vertical-align: middle;
+          }
+      }
+      .center{
+           text-align: center;
+           height: 100%;
+           font-size: 44rem/@base;
+           line-height: 100rem/@base;
+
+
+      }
+   
+}
+.pic_nav{
+     margin:30rem/@base 0;
+      width: 100%;
+      background: #fff;
+         ul{
+             li{
+                  width:32%;
+                  height: 150rem/@base;
+                  border:1px solid #ccc;
+                  float: left;
+                  padding-top:10rem/@base;
+                  margin: 5rem/@base 5rem/@base;
+                    .pic_div{
+                         width: 100rem/@base;
+                         height: 100rem/@base;
+                         margin: 0 auto;
+                    }
+                    p{
+                        font-size:20rem/@base;
+                        text-align: center;
+                    }
+             }
+         }
+   }
+}

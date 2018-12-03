@@ -43,22 +43,26 @@
                     </div>
                 <!-- 对应的内容 -->
                     <div class="list_content "> 
-                            <ul>
-                              <li>
+                            <ul class="ul_content">
+                              <!-- <li>
                                 <a href="http://">
                                    <div class="left">
-                                      <img src="./images/categorylist.jpg">
+                                       <div class="pic">
+                                          <img src="./images/categorylist.jpg">
+                                       </div>
                                    </div>
                                    <div class="right">
-                                       <p>1111111</p>
-                                       <p class="price"> </p>
-                                       <p>
-                                         <span>报价(6)</span>
-                                         <span>评论(2286)</span>
-                                       </p>
+                                        <div class="inner">
+                                            <p class="text">乐视TV(Letv)S50 Air全配版2D 50英寸全高清LED液晶电视</p>
+                                            <p class="price">￥1999 </p>
+                                            <p class="finish">
+                                              <span>报价(6)</span>
+                                              <span>评论(2286)</span>
+                                            </p>
+                                        </div>
                                    </div>
                                 </a>
-                              </li>
+                              </li> -->
                             </ul>
                     </div>
               </div> 
@@ -70,7 +74,37 @@
                 </div>
         </div>
     
-    
+        <!-- 分页 -->
+        <div class="page clearfix">
+                <div class="pageUp btn fl">
+                   <a href="#" class="up">上一页</a>
+                </div>
+                <!-- 下拉菜单 -->
+                <!-- <div class="dropdown dropdownPage">
+                    <button class="dropdown-toggle pageBtn" id="dropdownMenu1" data-toggle="dropdown"  >
+                     1/15
+                    </button>
+                    <ul class="dropdown-menu dropdownul" >
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Action</a></li>
+                    </ul>
+                  </div> -->
+                  <span class="outside">
+                      <!-- <p>1/15</p>
+                       <span class="icon_fa">
+                          
+                          <i class="fa fa-chevron-down"></i>
+                       </span>
+                       <ul class="inner"> 
+                         <li>11</li>
+                         <li>22</li>
+                       </ul> -->
+                  </span>
+                <div class="fr pageDown">
+                   <a  class="down" href="#">下一页</a>
+                </div>
+      </div>
        
        
        
@@ -102,42 +136,56 @@
        </div>
   </div>
   <!-- 菜单栏部分模板 -->
-<script type="text/html" id="indexmenuTpl">
+<script type="text/html" id="categorybyidTpl">
   {{each result v i}}
-    <li>
-      <a href="{{ v.titlehref }}" data-id="{{ v.indexmenuId }}" class="{{ v.indexmenuId == 7 ? 'more' : '' }}">
-        {{@v.img}}
-        <p>{{v.name}}</p>
-      </a>
-    </li>
+      <a href="index.html">首页></a>         
+      <a href="category.html">全部分类></a>         
+      <a href="" data-name="{{ v.category }}" >{{ v.category }}</a>   
   {{/each}}
-</script>
-<!-- 折扣模板 -->
-<script type="text/html" id="moneyctrlTpl">
+</script>   
+<!-- 分类模板 -->
+<script type="text/html" id="productlistTpl">
  {{each result v i}}
-  <li>
-      <a href="">
-           <div class="pic fl">
-              {{@v.productImgSm}}
-           </div>
-           <div class="right">
-              <div class="info">
-                 <p class="text">{{ v.productName }}<span>{{ v.productPinkage }}</span></p>
-                 <span class="time ">
-                     {{ v.productFrom }} | {{ v.productTime }}
-                 </span>
-                 <span class="num"> {{ v.productComCount.replace("有","").replace("人评论","") }}</span>
-              </div>
-             
-           </div>
-      </a>
-    </li>
+ <li>
+  <a data-id="{{ v.categoryId }}" href="product.html?productId={{ v.productId }}&categoryId={{v.categoryId}}">
+     <div class="left">
+         <div class="pic">
+            <!-- <img src="./images/categorylist.jpg"> -->
+            {{@v.productImg}}
+         </div>
+     </div>
+     <div class="right">
+          <div class="inner">
+              <p class="text">{{ v.productName }}</p>
+              <p class="price">{{ v.productPrice }} </p>
+              <p class="finish">
+                <span>报价{{ v.productQuote }}</span>
+                <span>评论{{ v.productCom }}</span>
+              </p>
+          </div>
+     </div>
+  </a>
+</li>
  {{/each}}
 </script>
+<!-- 分页模板 -->
+<script type="text/html" id="pageTpl">
+  <p>1/15</p>
+  <span class="icon_fa">
+     
+     <i class="fa fa-chevron-down"></i>
+  </span>
+  <ul class="inner"> 
+    <li>11</li>
+    <li>22</li>
+  </ul>
+</script>
+  <script src="./lib/jquery/jquery.min.js"></script> 
+  <script src="./js/getKey.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
-  <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/flexible/flexible.js"></script>
   <script src="./lib/mui/js/mui.js"></script>
   <script src="./js/productlist.js"></script>
+  
 </body>
 </html>

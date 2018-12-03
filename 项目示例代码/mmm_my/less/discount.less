@@ -1,0 +1,193 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+img{
+  width: 100%;
+  height: 100%;
+}
+.mm_containter{
+    background: #fff;
+}
+.mm_containter.top{
+        padding-top:93rem/@base;
+}
+.left_icon{
+    color: #fff;
+    font-size:40rem/@base;
+    width: 50rem/@base;
+    height: 50rem/@base;
+}
+.center{
+    margin-top: 12rem/@base;
+    text-align: center;
+    font-size:40rem/@base;
+    color: #fff;
+}
+.mm_simple{
+     margin-top:40rem/@base;
+     padding-left: 24rem/@base;
+     h1{
+           font-size:30rem/@base;
+     }
+      .p1{
+      margin:36rem/@base 0;
+      font-size: 20rem/@base;
+      color:#ad9a8e;
+      }
+      .info{
+          font-size:30rem/@base;
+          width: 100%;
+          margin-bottom: 30rem/@base;
+          line-height: 46rem/@base;
+            .top{
+                 
+                  .text{
+                      width: 100%;
+                      height: 100%;
+                      .pic{
+                        width: 271rem/@base;
+                        
+                    }
+                  }
+                
+               
+              
+               
+            }
+            .info_pic{
+                  width:100%;
+                  height: 690rem/@base;
+                 
+            }
+              
+      }
+
+}
+.mm_list{
+    padding: 0 20rem/@base;
+    width: 276rem/@base;
+    background: skyblue;
+    margin: 0 auto;
+    box-shadow: 0rem/@base 1rem/@base  10rem/@base #666;
+       ul{
+            li{
+                width: 100%;
+                padding: 0 17rem/@base;
+                height: 40rem/@base;
+                border-bottom: 1px dashed #ccc;
+                font-size: 20rem/@base;
+              strong{ 
+                      float:right;
+                      height: 100%;
+                      line-height:40rem/@base; 
+                        color: #f27229;
+
+                }
+            }
+        }
+     }
+   
+
+// 前往购买
+.mm_goshop{
+    padding: 0 10rem/@base;
+    .shop_btn{
+        width: 667rem/@base;
+        height: 60rem/@base;
+        line-height: 60rem/@base;
+        color: #fff;
+        font-size: 30rem/@base;
+        background:#ff9000;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 5px;
+        margin: 42rem/@base 20rem/@base;
+                             
+    }
+    .shop_text{
+        width: 706rem/@base;
+        height: 274rem/@base;
+        background:blueviolet;
+    }
+}
+.shop_comment{
+      margin-top:50rem/@base;
+     .tit{
+          font-size:34rem/@base;
+
+     }
+     .reply{
+       
+         border:1px solid #ccc;
+         width: 100%;
+         height: 220rem/@base;
+        //    .form{
+        //         height: 100%;
+        //    }
+            .ctrl{
+                height: 74rem/@base;
+                width: 100%;
+                border-top:2rem/@base solid #ccc;
+                position: relative;
+                background:#fbfbfb ;
+                bottom: -12rem/@base;
+                .tjdp{
+                    position: absolute;
+                    // float: right;
+                    right: 0;
+                    color: #fff;
+                    bottom:0;
+                    width: 200rem/@base;
+                    height: 74rem/@base;
+                    background: #ff841d;
+                    font-size: 34rem/@base;
+              }
+            }
+         
+     }
+     .list{
+         ul{
+             width: 100%;
+             li{
+                 width: 100%;
+                 height: 120rem/@base;
+                 .userimg{
+                       width:80rem/@base;
+                       float: left;
+                       height: 80rem/@base;
+                         img{
+                            border-radius: 50%;
+                         }
+                      
+                 }
+                .con{
+                      float: left;
+                      
+                      .name{
+                             width: 610rem/@base;
+                             font-size:22rem/@base;
+                             .username{
+                                    float: left;
+                                    color:#578cb6;
+                             }
+                             .time{
+                                   float: right;
+                                   color: #b6a4a2;
+                             }
+                      }
+                      .content{
+                          font-size: 30rem/@base;
+                      }
+                }
+                 
+                
+             }
+         }
+     }
+}

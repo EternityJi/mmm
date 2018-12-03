@@ -1,0 +1,58 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+img{
+  width: 100%;
+  height: 100%;
+}
+.mm_main{
+    ul{
+       width: 100%;
+        
+       li{
+           float: left;
+           width: 50%;
+           height:530rem/@base;
+           padding: 20rem/@base;
+           border-bottom:1rem/@base solid #ccc;
+           border-right:1rem/@base solid #ccc;
+           &:nth-child(2n){
+            border-right: none;
+        }
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            .pic{
+              width: 100%;
+              height: 320rem/@base;
+              background: green;
+             }
+             .text{
+                  font-size: 30rem/@base;
+                  height: 70rem/@base;
+                  color: #000517;
+                  line-height: 38rem/@base;
+             }
+             .price{
+                 color: orange;
+                 font-size: 20rem/@base;
+                 line-height: 38rem/@base;
+             }
+             span{
+                  font-size: 20rem/@base;
+                  color: #ccc;
+                  margin-top:30rem/@base;
+             }
+          }
+          
+       }
+       
+    }
+}

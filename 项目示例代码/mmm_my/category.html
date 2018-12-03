@@ -13,9 +13,11 @@
   <div class="mm_containter">
       <!-- 头部 -->
       <div class="mm_header">
+        <a href="index.html">
           <div class="logo">
                <img src ="./images/header_logo.png">
           </div>
+        </a>
           <div class="app">
                <img src = "./images/header_app.png">
           </div>
@@ -96,7 +98,7 @@
 <script type="text/html" id="categoryTpl">
    {{ each result v i}}
       <li >
-        <a data-id={{ v.categoryId }} href="">{{ v.category }}</a>
+        <a data-id={{ v.categoryId }} href="productlist.html?categoryId={{ v.categoryId }}&category={{ v.category}}">{{ v.category }}</a>
       </li>
    {{/each}}
 </script>

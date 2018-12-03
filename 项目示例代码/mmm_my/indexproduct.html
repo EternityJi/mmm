@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/discountproduct.css">
+  <title>商品详情</title>
+</head>
+<body>
+  <div class="mm_containter top" >
+                      <!-- 头部 -->
+          <div class="mm_header">
+            <div class="logo">
+                 <a href="javascript:history.back();"><i class="fa fa-chevron-left left_icon"></i>
+                 </a>
+            </div>
+            <div class="center">
+                国内折扣
+            </div>
+            <div class="app">
+                 <img src = "./images/header_app.png">
+            </div>
+         </div>
+         <!-- 主体部分 -->
+         <div class="mm_main">
+            <!--  渲染 -->
+         </div>
+       <!-- 底部 -->
+       <div class="mm_footer">
+              <ul class="clearfix">
+                <li>
+                  <a href="">
+                      登录
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                      注册
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="returnTop">
+                     <i class="pic"><img src="./images/top.jpg"></i>返回顶部
+                  </a>
+                </li>
+              </ul>
+              <p class="p1">
+                  <span style="color:#fe1206">手机APP下载</span>
+                  <span>慢慢买手机版</span>
+                  <span style="color:#d0cfcd">--掌上比价平台</span>
+             </p>
+              <p  class="p2">m.manmanbuy.com</p>
+       </div>
+  </div>
+  <!-- 菜单栏部分模板 -->
+<script type="text/html" id="indexproductTpl">
+  {{each result v i}}
+  <div class="mm_simple">
+      <h1>
+          {{v.productName}}
+      </h1>
+      <p class="price" color="red">
+          {{ v.productPrice}}
+      </p>
+    
+      <p class="p1">
+          <span>{{ v.productFrom }}</span>
+          <span>{{ v.productTime }}</span>
+          <span>{{ v.productTips }}</span>
+      </p>
+      <div class="info">
+         
+            <div class="top clearfix">
+                 <div class="text fl">
+                 
+                      <div class="pic fr">
+                            {{@v.productImgLg}}
+                      </div>
+                      {{v.productInfo}}
+                 </div>
+               
+            </div>
+            <div class="info_pic">
+                {{@v.productImgLg}}
+            </div>
+      </div>
+</div>
+
+     
+</div>
+<!-- 前往购买 -->
+   <div class="mm_goshop">
+     <!-- 前往购买 -->
+     <div class="shop_btn">
+         前往购买
+     </div>
+     <!-- 二维码框 -->
+     <!-- <div class="shop_text">
+         {{@v.productImg3}}
+     </div> -->
+      <!--发表评论-->
+     <div class="shop_comment">
+       {{@v.productComment}}
+         <!-- <div class="comment_title">
+             发表评论
+         </div>
+         <div class="comment_textarea">
+               <span>发表评论</span>
+         </div> -->
+     </div>
+     <!-- 最新评论 -->
+     <div class="comment_now"></div>
+</div>
+  {{/each}}
+</script>
+
+
+ <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/getKey.js"></script>
+  <script src="./js/indexproduct.js"></script>
+</body>
+</html>

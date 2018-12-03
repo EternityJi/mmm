@@ -1,0 +1,119 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+.product_content{
+  margin-bottom: 30rem/@base;
+  .product_list{
+     width: 100%;
+     height: 73rem/@base;
+     line-height: 73rem/@base;
+     padding-left: 20rem/@base;
+     padding-right: 10rem/@base;
+     border-top:3px solid #ccc;
+     border-bottom: 3px solid #ccc;
+     .list {
+        .third{
+             span{
+                 height: 65rem/@base;
+                 width: 300rem/@base;
+                 display: block;
+                 white-space: nowrap;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+             }
+        }
+       a{
+          float: left;
+          display: inline-block;
+          font-size:28rem/@base;
+         
+            
+      
+            
+       }
+     }
+       .select{
+           font-size: 34rem/@base;
+           width: 126rem/@base;
+           height: 54rem/@base;
+           line-height: 54rem/@base;
+           border-radius:10px;
+           margin-top: 10rem/@base;
+       }
+  }
+ //  对应的内容
+ .list_content{
+     background: #fff;
+     li{
+         width: 100%;
+         height: 235rem/@base;
+         border-bottom:2px solid #ccc;
+           a{
+                 width: 100%;
+                 height: 100%;
+                 padding-left: 200rem/@base;
+                 position: relative;
+                 .left{
+                     position: absolute;
+                     left: 0;
+                     width: 200rem/@base;
+                     height: 100%;
+                     line-height: 122rem/@base;
+                        .pic{
+                              width: 187rem/@base;
+                              height: 120rem/@base;
+                              margin-top:25rem/@base;
+                              margin-left: 20rem/@base;
+                        }
+                 }   
+                 .right{
+                     width: 100%; 
+                     height: 100%;
+                        .inner{
+                         width: 100%; 
+                         height: 100%;
+                         padding-left: 25rem/@base;
+                         padding-top: 27rem/@base;
+                             p{
+                                 line-height: 52rem/@base;
+                             }
+                             .text{
+                                    font-size:30rem/@base;
+                             }
+                             .price{
+                                   color: red;
+                                   font-size:25rem/@base;
+                             }
+                             .finish{
+                                 font-size: 24rem/@base;
+                                 color: #959ba3;
+                             }
+                        }
+                 }
+           }
+        
+     }
+    
+ }
+}
+.mm_big{
+  .box{
+    // width: 100%;
+    // height: 1.04rem;
+    // line-height: 1.04rem;
+    // font-size: 0.50666667rem;
+    // border: 1px solid #c7c7c7;
+    // border-radius: 5px;
+    .title{
+         border: 1px solid #c7c7c7; 
+    }
+    
+  }
+ 
+}

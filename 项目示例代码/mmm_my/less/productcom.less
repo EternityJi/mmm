@@ -1,0 +1,69 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色 
+.mm_containter .mm_recommend .main ul li{
+    border:none;
+    margin-left: 30rem/@base;
+}
+.main_info{
+  margin-top:20rem/@base;
+  // border-bottom:1px solid #ccc;
+  border-top:1px solid #ccc;
+.comment{
+    width: 100%;
+    padding:0 20rem/@base;
+    // height: 500rem/@base;
+    margin: 50rem/@base auto 0 auto;
+    .inner{
+        padding: 0 20rem/@base;
+        height: 100%;
+        border:1px solid #ccc;
+        position: relative;
+        background: #f8f8f8;
+        .top{
+            height: 80rem/@base;
+            line-height: 80rem/@base;
+            font-size:25rem/@base;
+             span{
+                 &:nth-child(1){
+                     color:green;
+                 }
+                 &:nth-child(2){
+                  color:#ccc;
+              }
+             }
+        }
+      //   i{
+      //      position: absolute;
+      //      top: -22rem/@base;
+      //      left: 49rem/@base;
+      //      color: #f8f8f8;
+           
+      //  }
+      .sj{
+        position: absolute;
+        top: -40rem/@base;
+        left: 40rem/@base;
+        width:0;
+        height:0;
+        border:20rem/@base solid;
+        /* 平分效果 */
+        /*border-color:red green blue black; */
+
+        /* 单个三角形 */
+        border-color:transparent transparent #ccc transparent;
+      }
+       .text{
+           font-size:25rem/@base;
+           line-height:43rem/@base ;
+       }
+    }
+    
+}
+}

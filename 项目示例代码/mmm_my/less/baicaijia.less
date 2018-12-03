@@ -1,0 +1,279 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+img{
+  width: 100%;
+  height: 100%;
+}
+.mm_containter .mm_search{
+    margin-bottom: 0;
+    padding: 0;
+    // background: pink;
+    height: auto;
+}
+.arrow{
+       
+  right: 30rem/@base;
+   width: 80rem/@base;
+   text-align: center;
+   height: 80rem/@base;
+   line-height: 80rem/@base;
+   display: inline-block;
+   background:hsla(0, 0%, 0%, 0.514);
+   border-radius: 50%;
+   color: #fff;
+   font-size: 40rem/@base;
+   position: fixed;
+   z-index: 9999;
+   bottom: 10rem/@base;
+}
+.mm_containter.top{
+     width: 100%;
+     height:100%;
+     padding-top:180rem/@base;
+    //  background: #f1f1f1;
+        .mm_header{
+             width: 100%;
+             height: 100rem/@base;
+             position: fixed;
+             top:0;
+             background: #f4483e;
+             z-index: 999;
+         
+               .logo{
+                    position: absolute;
+                    top:25rem/@base;
+                    left: 35rem/@base;
+                    width: 371rem/@base;
+                    height: 50rem/@base;
+                   
+                 }
+                 .app{
+                     width: 68rem/@base;
+                     height: 68rem/@base;
+                     position: absolute;
+                     top:10rem/@base;
+                     right: 10rem/@base;
+                 }
+              
+        }
+        .mm_search{
+          ul{
+              font-size:25rem/@base;
+            li{
+              padding:0 26rem/@base;
+              float: left;
+              height: 75rem/@base;
+              line-height: 75rem/@base;
+              text-align: center;
+              // margin: 0 25rem/@base;
+                a{
+                  display: block;
+                  height: 100%;
+                  width: 100%;
+                  border-bottom:2px solid transparent;
+                  &.current{
+                    border-bottom:2px solid red;
+                  }
+                }
+            }
+          }
+       }
+     
+      
+        .mm_recommend{
+              background: #fff;
+       
+            .main{
+                ul{
+                  li{
+                       width: 100%;
+                      //  padding:30rem/@base 0;
+                       height: 260rem/@base;
+                       border-bottom: 1px solid #ccc;
+                       position: relative;
+                       padding-left: 243rem/@base;
+                      .pic{
+                        position: absolute;
+                         width:243rem/@base;
+                         height:214rem/@base;
+                        //  background: green;
+                         left: 0;
+                      }
+                      .right{
+                        
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                          .info{
+                            padding-left: 33rem/@base;
+                            .text{
+                              width: 100%;
+                              height: 90rem/@base;
+                              font-size: 34rem/@base;
+                            }
+                            .price{
+                              color: red;
+                              font-size:20rem/@base;
+                                em{
+                                  font-size:32rem/@base;
+                                }
+                                del{
+                                  color: #666;  
+                                  margin-left: 30rem/@base;
+                                }
+                                
+                            }
+                            .progress{
+                              .bar{
+                                    i{
+                                      // display: block;
+                                      width: 164rem/@base;
+                                      height: 26rem/@base;
+                                      border:1px solid #f4483e;
+                                      border-radius: 20px;
+                                      float: left;
+                                      position: relative;
+                                        span{
+                                          position: absolute;
+                                          top:0;
+                                          left: 0;
+                                          // width: 122rem/@base;
+                                          height: 24rem/@base;
+                                          line-height: 24rem/@base;
+                                          background:#f4483e;
+                                          border-radius: 12rem/@base; 
+                                          text-align: center;
+                                          font-size: 12rem/@base;
+                                          color: #fff;
+                                        }
+                                    }
+                                    b{
+                                      float: right;
+                                      margin-right: 10rem/@base;
+                                      font-size: 20rem/@base;
+                                      color: #f4483e;
+                                    }
+
+                                  }
+                              }
+                               .pot{
+                                   margin-top:15rem/@base;
+                                   a:nth-child(1){
+                                    float: left;
+                                    width:215rem/@base;
+                                    height: 50rem/@base;
+                                    line-height: 50rem/@base;
+                                    text-align: center;border:1px dashed #f4483e;
+                                    font-size:20rem/@base;
+                                   }
+                                   a:nth-child(2){
+                                    float: right;
+                                    width: 114rem/@base;
+                                    height: 56rem/@base;
+                                    color: #fff;
+                                    line-height: 56rem/@base;
+                                    text-align: center;
+                                    background: #f4483e;
+                                    border-radius: 10rem/@base;
+                                   }
+                               }
+                                
+                            }
+                          }
+                      }
+                  }
+                }
+            }
+
+      
+        .mm_more{
+            width: 100%;
+            height: 83rem/@base;
+            padding-top:22rem/@base;
+            padding-left: 25rem/@base;
+            padding-right: 25rem/@base;
+           
+            .info{
+              border:1px solid #ccc;
+              border-radius: 5px;
+              font-size: 30rem/@base;
+              text-align: center;
+              color: #020202;
+             }
+        }
+        .mm_sort{
+
+          .title{
+            width: 100%;
+            height:66rem/@base;
+            background: #ffa024;
+            padding-left:25rem/@base;
+            padding-right: 25rem/@base;
+            line-height: 66rem/@base;
+            color: #fff;
+            font-size: 36rem/@base;
+            position: relative;
+            .icon{
+             position: absolute;
+             top:12rem/@base;
+             right:25rem/@base;
+             width:40rem/@base;
+             height: 40rem/@base;
+             
+         }
+       }
+        }
+        .mm_footer{
+           ul{
+               border:1px solid #ccc;
+               margin-top:50rem/@base;
+               margin-bottom: 33rem/@base;
+            li{
+              width: 33.3%;
+              font-size: 40rem/@base;
+              float: left;
+              height: 63rem/@base;
+              line-height: 63rem/@base;
+              text-align: center;
+              border-right:1px solid #ccc;
+              &:nth-child(3){
+                border-right:none;
+                position: relative;
+                i{   
+                    position: absolute;
+                    width: 30rem/@base;
+                    height: 30rem/@base;
+                    top: 12rem/@base;
+                    left: 5rem/@base;
+                }
+              }
+             }
+           
+           }
+           p{
+            width: 100%;
+            text-align: center;
+            line-height: 50rem/@base;
+            
+          }
+          .p1{
+              font-size: 23rem/@base;
+          }
+          .p2{
+            font-size:12rem/@base;
+          }
+         
+        }
+
+      }
+.mm_footer {
+    height: 260rem/@base;
+    
+}

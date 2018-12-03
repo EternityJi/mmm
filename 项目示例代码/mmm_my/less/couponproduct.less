@@ -1,0 +1,165 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+img{
+  width: 100%;
+  height: 100%;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.mm_containter{
+  padding-top: 100rem/@base;
+.mm_header{
+width: 100%;
+height: 100rem/@base;
+position: fixed;
+top:0;
+background: #f4483e;
+z-index: 999;
+color:#fff;
+  .logo{
+       position: absolute;
+       left: 0;
+       top:0;
+       width: 100rem/@base;
+       height: 100rem/@base;
+       line-height: 100rem/@base;
+       text-align: center;
+         a{
+              display: block;
+             i{
+                 color: #fff;
+             }
+         }
+    }
+    .app{
+        width: 100rem/@base;
+        height: 100rem/@base;
+        line-height: 100rem/@base;
+        position: absolute;
+        right: 0;
+        top:0;
+        img{
+           width: 68rem/@base;
+           height: 68rem/@base;
+           display: inline-block;
+           vertical-align: middle;
+        }
+    }
+    .center{
+         text-align: center;
+         height: 100%;
+         font-size: 44rem/@base;
+         line-height: 100rem/@base;
+
+
+    }
+ 
+  }
+  .show_coupon{
+       width: 100%;
+       height: 70rem/@base;
+       line-height: 66rem/@base;
+       color:#666;
+       text-align: center;
+       font-size:30rem/@base;
+       background: #fff;
+  }
+  .wraper{
+       .main{
+             .moneyctrlUl{
+                  // height: 600rem/@base;
+                 li{
+                     a{
+                      display: block;
+                      width: 100%;
+                      height: 316rem/@base;
+                      border-top:1rem/@base solid #ccc;
+                      border-bottom:1rem/@base solid #ccc;
+                      padding-top:20rem/@base;
+                      .left{
+                           width: 210rem/@base;
+                           height: 100%;
+                           float: left;
+                               .pic{
+                                    width: 100%;
+                                    height: 180rem/@base;
+                                    background: green;
+                               }
+                      }
+                      .right{
+                        margin-top:18rem/@base;
+                         margin-left: 10rem/@base;
+                         overflow: hidden;
+                         .info{
+                           .text{
+                            font-size: 30rem/@base;
+                           }
+                           .price{
+                               font-size: 24rem/@base;
+                               line-height: 80rem/@base;
+                           }
+                           .time{
+                                margin-top: 100rem/@base;
+                                font-size: 18rem/@base;
+                                color: #ffa024;
+                           }
+                           .num{
+                               float: right;
+                               margin-right:30rem/@base;
+                               color: #666;
+
+                           }
+                         }
+                      }
+                 }
+             }
+       }
+  }
+}
+}
+
+.Carousel{
+     width: 100%;
+     height: 100%;
+     background: green;
+     position: fixed;
+     z-index: 99999999;
+     background:rgba(0, 0, 0, 0.5);
+     top:0;
+       .inner{
+        width: 237rem/@base;
+        height: 204rem/@base;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform:translateY(-50%) translateX(-50%);
+        span{
+          position: absolute;
+          top:50%;
+          left: -52rem/@base;  
+          transform: translateY(-50%);
+          background:rgba(0, 0, 0, 0.5);
+          width:50rem/@base; 
+          height: 60rem/@base;
+          line-height: 60rem/@base;
+          text-align: center;
+          color: #fff;
+          font-size:40rem/@base;
+          border-radius:5rem/@base;
+        }
+        .right{
+          right:-52rem/@base;
+          left: auto;
+
+        }
+       }
+}

@@ -8,7 +8,7 @@ $(function(){
 
    var id;
     $.ajax({
-      url: "http://192.168.43.129:9090/api/getcategorytitle",
+      url: "http://127.0.0.1:9090/api/getcategorytitle",
       type:"get",
       dataType:"json",
         success:function(info){
@@ -27,7 +27,7 @@ $(function(){
 
         // console.log(id);
           $.ajax({
-            url: "http://192.168.43.129:9090/api/getcategory",
+            url: "http://127.0.0.1:9090/api/getcategory",
             type:"get",
             dataType:"json",
             data:{

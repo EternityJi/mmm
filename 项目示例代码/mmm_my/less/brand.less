@@ -1,0 +1,80 @@
+// 浏览器样式统一  normalize
+@import "normalize";
+// 在normalize的基础上  重置掉我们不需要的默认样式
+@import "base";
+// 使用rem布局
+//flexible  规定   基准值 = 设计图尺寸/10   750px(设计图尺寸)  
+@desgin: 750;//设计图尺寸
+@base: @desgin / 10; //基准值  75
+@mmColor:#ffa024;//主题色  慢慢买黄
+.product_content {
+  margin-bottom: 0;
+}
+.good_title{
+    width: 100%;
+    height: 73rem/@base;
+    line-height: 73rem/@base;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    color:orange;
+    font-size:20rem/@base;
+    position: relative;
+    span{
+        position: absolute;
+        left: 20rem/@base;
+    }
+}
+.sale{
+    ul{
+      li{
+          width: 100%;
+          height:130rem/@base;
+          border-bottom: 1rem/@base solid #ccc;
+          position: relative;
+           a{
+             display: block;
+             height:130rem/@base;
+          .left{
+              width: 80rem/@base;
+              height:130rem/@base;
+              // background: pink;
+              padding-top:10rem/@base;
+              padding-left: 25rem/@base;
+              box-sizing: border-box;
+              left: 0;
+                .quare{
+                   width: 40rem/@base;
+                   height: 40rem/@base;
+                   line-height: 40rem/@base;
+                   text-align: center;
+                   background: #ccc;
+                }
+              } 
+           .right{
+             padding-top:10rem/@base;
+            height:130rem/@base;
+             h1{
+              font-size:37rem/@base;
+              margin: 0;
+
+             }
+             p{
+                font-size: 25rem/@base;
+                line-height: 60rem/@base;
+                color: #ccc;
+             }
+            
+            
+           }
+           span{
+            position: absolute;
+            right: 15rem/@base;
+            top:50%;
+            transform: translateY(-50%);
+            font-size:50rem/@base;
+            color: #ccc;
+            }
+          }
+      }
+    }
+}
